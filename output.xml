@@ -1,0 +1,2002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.1a2 (Python 3.8.7 on win32)" generated="20220926 11:07:38.245" rpa="false" schemaversion="3">
+<suite id="s1" name="Skc-Cr" source="G:\Ada V.5.0\ADA SKC\GC\QA\skc-cr.robot">
+<test id="s1-t1" name="Login_SC" line="14">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220926 11:07:38.593" level="INFO">Opening browser 'chrome' to base url 'http://sit.ada-soft.com:8889/login'.</msg>
+<status status="PASS" starttime="20220926 11:07:38.592" endtime="20220926 11:07:40.677"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220926 11:07:40.677" endtime="20220926 11:07:40.678"/>
+</kw>
+<status status="PASS" starttime="20220926 11:07:38.592" endtime="20220926 11:07:40.678"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220926 11:07:40.679" endtime="20220926 11:07:41.314"/>
+</kw>
+<kw name="type">
+<arg>id=oetUsername</arg>
+<arg>009</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:07:41.319" level="INFO">Typing text '009' into text field 'id=oetUsername'.</msg>
+<status status="PASS" starttime="20220926 11:07:41.317" endtime="20220926 11:07:42.952"/>
+</kw>
+<status status="PASS" starttime="20220926 11:07:41.316" endtime="20220926 11:07:42.952"/>
+</kw>
+<kw name="type">
+<arg>id=oetPassword</arg>
+<arg>123456</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:07:42.953" level="INFO">Typing text '123456' into text field 'id=oetPassword'.</msg>
+<status status="PASS" starttime="20220926 11:07:42.953" endtime="20220926 11:07:44.586"/>
+</kw>
+<status status="PASS" starttime="20220926 11:07:42.952" endtime="20220926 11:07:44.586"/>
+</kw>
+<kw name="click">
+<arg>xpath=//button[@id='obtLOGConfirmLogin']/span</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:07:44.587" level="INFO">Clicking element 'xpath=//button[@id='obtLOGConfirmLogin']/span'.</msg>
+<status status="PASS" starttime="20220926 11:07:44.587" endtime="20220926 11:07:45.658"/>
+</kw>
+<status status="PASS" starttime="20220926 11:07:44.587" endtime="20220926 11:07:45.658"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>AdaSoft</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:07:45.659" endtime="20220926 11:08:14.310"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="spnCompanyName"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:08:15.369" level="INFO">${response} = AdaSoft</msg>
+<status status="PASS" starttime="20220926 11:08:14.311" endtime="20220926 11:08:15.369"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>AdaSoft</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 11:08:15.370" endtime="20220926 11:08:15.371"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220926 11:08:15.372" endtime="20220926 11:08:18.052"/>
+</kw>
+<status status="PASS" starttime="20220926 11:07:38.591" endtime="20220926 11:08:18.054"/>
+</test>
+<test id="s1-t2" name="Login_FC" line="27">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220926 11:08:18.066" level="INFO">Opening browser 'chrome' to base url 'http://sit.ada-soft.com:8889/login'.</msg>
+<status status="PASS" starttime="20220926 11:08:18.065" endtime="20220926 11:08:20.277"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220926 11:08:20.278" endtime="20220926 11:08:20.279"/>
+</kw>
+<status status="PASS" starttime="20220926 11:08:18.062" endtime="20220926 11:08:20.279"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220926 11:08:20.281" endtime="20220926 11:08:20.941"/>
+</kw>
+<kw name="type">
+<arg>id=oetUsername</arg>
+<arg>009</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:08:20.945" level="INFO">Typing text '009' into text field 'id=oetUsername'.</msg>
+<status status="PASS" starttime="20220926 11:08:20.944" endtime="20220926 11:08:22.549"/>
+</kw>
+<status status="PASS" starttime="20220926 11:08:20.942" endtime="20220926 11:08:22.549"/>
+</kw>
+<kw name="type">
+<arg>id=oetPassword</arg>
+<arg>123456789</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:08:22.550" level="INFO">Typing text '123456789' into text field 'id=oetPassword'.</msg>
+<status status="PASS" starttime="20220926 11:08:22.549" endtime="20220926 11:08:24.158"/>
+</kw>
+<status status="PASS" starttime="20220926 11:08:22.549" endtime="20220926 11:08:24.158"/>
+</kw>
+<kw name="click">
+<arg>xpath=//button[@id='obtLOGConfirmLogin']/span</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:08:24.160" level="INFO">Clicking element 'xpath=//button[@id='obtLOGConfirmLogin']/span'.</msg>
+<status status="PASS" starttime="20220926 11:08:24.160" endtime="20220926 11:08:25.219"/>
+</kw>
+<status status="PASS" starttime="20220926 11:08:24.159" endtime="20220926 11:08:25.219"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//*[@id="ospUsrOrPwNotCorrect"]</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220926 11:08:25.220" endtime="20220926 11:08:26.248"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:08:26.250" endtime="20220926 11:08:26.793"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="ospUsrOrPwNotCorrect"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:08:27.823" level="INFO">${response} = ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง</msg>
+<status status="PASS" starttime="20220926 11:08:26.794" endtime="20220926 11:08:27.823"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 11:08:27.824" endtime="20220926 11:08:27.824"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220926 11:08:27.825" endtime="20220926 11:08:30.406"/>
+</kw>
+<status status="PASS" starttime="20220926 11:08:18.060" endtime="20220926 11:08:30.407"/>
+</test>
+<test id="s1-t3" name="AD_Cre_Receipt_Suc" line="41">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220926 11:08:30.411" level="INFO">Opening browser 'chrome' to base url 'http://sit.ada-soft.com:8889/login'.</msg>
+<status status="PASS" starttime="20220926 11:08:30.410" endtime="20220926 11:08:32.630"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220926 11:08:32.630" endtime="20220926 11:08:32.631"/>
+</kw>
+<status status="PASS" starttime="20220926 11:08:30.410" endtime="20220926 11:08:32.631"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220926 11:08:32.632" endtime="20220926 11:08:33.280"/>
+</kw>
+<kw name="type">
+<arg>id=oetUsername</arg>
+<arg>009</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:08:33.285" level="INFO">Typing text '009' into text field 'id=oetUsername'.</msg>
+<status status="PASS" starttime="20220926 11:08:33.283" endtime="20220926 11:08:34.873"/>
+</kw>
+<status status="PASS" starttime="20220926 11:08:33.282" endtime="20220926 11:08:34.873"/>
+</kw>
+<kw name="type">
+<arg>id=oetPassword</arg>
+<arg>123456</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:08:34.875" level="INFO">Typing text '123456' into text field 'id=oetPassword'.</msg>
+<status status="PASS" starttime="20220926 11:08:34.874" endtime="20220926 11:08:36.498"/>
+</kw>
+<status status="PASS" starttime="20220926 11:08:34.874" endtime="20220926 11:08:36.498"/>
+</kw>
+<kw name="click">
+<arg>xpath=//button[@id='obtLOGConfirmLogin']/span</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:08:36.499" level="INFO">Clicking element 'xpath=//button[@id='obtLOGConfirmLogin']/span'.</msg>
+<status status="PASS" starttime="20220926 11:08:36.499" endtime="20220926 11:08:37.559"/>
+</kw>
+<status status="PASS" starttime="20220926 11:08:36.499" endtime="20220926 11:08:37.559"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//*[@id="spnCompanyName"]</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220926 11:08:37.560" endtime="20220926 11:08:45.989"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>AdaSoft</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:08:45.991" endtime="20220926 11:08:46.547"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="spnCompanyName"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:08:47.597" level="INFO">${response} = AdaSoft</msg>
+<status status="PASS" starttime="20220926 11:08:46.550" endtime="20220926 11:08:47.597"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>AdaSoft</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 11:08:47.598" endtime="20220926 11:08:47.598"/>
+</kw>
+<kw name="click">
+<arg>xpath=//div[@id='wrapper']/div[2]/div[3]/button/img</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:08:47.600" level="INFO">Clicking element 'xpath=//div[@id='wrapper']/div[2]/div[3]/button/img'.</msg>
+<status status="PASS" starttime="20220926 11:08:47.600" endtime="20220926 11:08:48.677"/>
+</kw>
+<status status="PASS" starttime="20220926 11:08:47.599" endtime="20220926 11:08:48.677"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ข้อมูลหลัก</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:08:48.678" endtime="20220926 11:08:49.210"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:08:49.212" level="INFO">Clicking element 'xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20220926 11:08:49.211" endtime="20220926 11:08:50.285"/>
+</kw>
+<status status="PASS" starttime="20220926 11:08:49.211" endtime="20220926 11:08:50.285"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ข้อมูลจุดขาย</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:08:50.286" endtime="20220926 11:08:50.828"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:08:51.900" level="INFO">${response} = ข้อมูลจุดขาย</msg>
+<status status="PASS" starttime="20220926 11:08:50.830" endtime="20220926 11:08:51.900"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>ข้อมูลจุดขาย</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 11:08:51.902" endtime="20220926 11:08:51.904"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="MASSPS"]/ul/li[2]/a</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:08:51.907" level="INFO">Clicking element 'xpath=//*[@id="MASSPS"]/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20220926 11:08:51.906" endtime="20220926 11:08:53.083"/>
+</kw>
+<status status="PASS" starttime="20220926 11:08:51.905" endtime="20220926 11:08:53.083"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ค้นหา</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:08:53.084" endtime="20220926 11:08:53.640"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="obtSmgAdd"]</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:08:53.643" level="INFO">Clicking element 'xpath=//*[@id="obtSmgAdd"]'.</msg>
+<status status="PASS" starttime="20220926 11:08:53.642" endtime="20220926 11:08:54.742"/>
+</kw>
+<status status="PASS" starttime="20220926 11:08:53.641" endtime="20220926 11:08:54.742"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>*ชื่อหัวท้ายใบเสร็จ</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:08:54.742" endtime="20220926 11:08:55.286"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="ofmAddSlipMessage"]/div/div[1]/div/div[5]/div/label</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:09:46.549" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220926 11:09:46.550" level="FAIL">Element with locator 'xpath=//*[@id="ofmAddSlipMessage"]/div/div[1]/div/div[5]/div/label' not found.</msg>
+<status status="FAIL" starttime="20220926 11:08:55.288" endtime="20220926 11:09:46.608"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>*ชื่อหัวท้ายใบเสร็จ</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20220926 11:09:46.609" endtime="20220926 11:09:46.609"/>
+</kw>
+<kw name="click">
+<arg>id=oetSmgFontsSize</arg>
+<status status="NOT RUN" starttime="20220926 11:09:46.609" endtime="20220926 11:09:46.610"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetSmgFontsSize</arg>
+<arg>16</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:09:46.610" endtime="20220926 11:09:46.610"/>
+</kw>
+<kw name="click">
+<arg>id=oetSmgTitle</arg>
+<status status="NOT RUN" starttime="20220926 11:09:46.611" endtime="20220926 11:09:46.611"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetSmgTitle</arg>
+<arg>SKC RC_SUC01</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:09:46.611" endtime="20220926 11:09:46.611"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0,200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20220926 11:09:46.612" endtime="20220926 11:09:46.612"/>
+</kw>
+<kw name="click">
+<arg>id=oetSmgSlipHead1</arg>
+<status status="NOT RUN" starttime="20220926 11:09:46.612" endtime="20220926 11:09:46.612"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetSmgSlipHead1</arg>
+<arg>Receipt/Tax</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:09:46.613" endtime="20220926 11:09:46.613"/>
+</kw>
+<kw name="click">
+<arg>id=xWSmgAddHeadRow</arg>
+<status status="NOT RUN" starttime="20220926 11:09:46.613" endtime="20220926 11:09:46.613"/>
+</kw>
+<kw name="click">
+<arg>id=oetSmgSlipHead2</arg>
+<status status="NOT RUN" starttime="20220926 11:09:46.613" endtime="20220926 11:09:46.614"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetSmgSlipHead2</arg>
+<arg>SiamKubota</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:09:46.614" endtime="20220926 11:09:46.614"/>
+</kw>
+<kw name="click">
+<arg>id=oetSmgSlipEnd1</arg>
+<status status="NOT RUN" starttime="20220926 11:09:46.614" endtime="20220926 11:09:46.614"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetSmgSlipEnd1</arg>
+<arg>WELCOME</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:09:46.614" endtime="20220926 11:09:46.614"/>
+</kw>
+<kw name="click">
+<arg>id=xWSmgAddEndRow</arg>
+<status status="NOT RUN" starttime="20220926 11:09:46.615" endtime="20220926 11:09:46.615"/>
+</kw>
+<kw name="click">
+<arg>id=oetSmgSlipEnd2</arg>
+<status status="NOT RUN" starttime="20220926 11:09:46.615" endtime="20220926 11:09:46.615"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetSmgSlipEnd2</arg>
+<arg>THANK YOU</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:09:46.615" endtime="20220926 11:09:46.615"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20220926 11:09:46.616" endtime="20220926 11:09:46.616"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="odvBtnAddEdit"]/div/button[1]</arg>
+<status status="NOT RUN" starttime="20220926 11:09:46.616" endtime="20220926 11:09:46.616"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>หัวท้ายใบเสร็จ</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:09:46.616" endtime="20220926 11:09:46.616"/>
+</kw>
+<kw name="click">
+<arg>id=oliSmgTitle</arg>
+<status status="NOT RUN" starttime="20220926 11:09:46.616" endtime="20220926 11:09:46.616"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//*[@id="oliSmgTitle"]</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220926 11:09:46.617" endtime="20220926 11:09:46.617"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220926 11:09:46.617" endtime="20220926 11:09:49.204"/>
+</kw>
+<status status="FAIL" starttime="20220926 11:08:30.409" endtime="20220926 11:09:49.206">Element with locator 'xpath=//*[@id="ofmAddSlipMessage"]/div/div[1]/div/div[5]/div/label' not found.</status>
+</test>
+<test id="s1-t4" name="AD_Cre_Sale_Ch_Suc" line="94">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220926 11:09:49.216" level="INFO">Opening browser 'chrome' to base url 'http://sit.ada-soft.com:8889/login'.</msg>
+<status status="PASS" starttime="20220926 11:09:49.215" endtime="20220926 11:09:51.395"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220926 11:09:51.396" endtime="20220926 11:09:51.397"/>
+</kw>
+<status status="PASS" starttime="20220926 11:09:49.214" endtime="20220926 11:09:51.397"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220926 11:09:51.399" endtime="20220926 11:09:52.062"/>
+</kw>
+<kw name="type">
+<arg>id=oetUsername</arg>
+<arg>009</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:09:52.065" level="INFO">Typing text '009' into text field 'id=oetUsername'.</msg>
+<status status="PASS" starttime="20220926 11:09:52.064" endtime="20220926 11:09:53.807"/>
+</kw>
+<status status="PASS" starttime="20220926 11:09:52.063" endtime="20220926 11:09:53.807"/>
+</kw>
+<kw name="type">
+<arg>id=oetPassword</arg>
+<arg>123456</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:09:53.809" level="INFO">Typing text '123456' into text field 'id=oetPassword'.</msg>
+<status status="PASS" starttime="20220926 11:09:53.808" endtime="20220926 11:09:55.429"/>
+</kw>
+<status status="PASS" starttime="20220926 11:09:53.808" endtime="20220926 11:09:55.429"/>
+</kw>
+<kw name="click">
+<arg>xpath=//button[@id='obtLOGConfirmLogin']/span</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:09:55.431" level="INFO">Clicking element 'xpath=//button[@id='obtLOGConfirmLogin']/span'.</msg>
+<status status="PASS" starttime="20220926 11:09:55.430" endtime="20220926 11:09:56.489"/>
+</kw>
+<status status="PASS" starttime="20220926 11:09:55.430" endtime="20220926 11:09:56.489"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//*[@id="spnCompanyName"]</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220926 11:09:56.490" endtime="20220926 11:10:05.315"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>AdaSoft</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:10:05.315" endtime="20220926 11:10:05.843"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="spnCompanyName"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:06.883" level="INFO">${response} = AdaSoft</msg>
+<status status="PASS" starttime="20220926 11:10:05.843" endtime="20220926 11:10:06.883"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>AdaSoft</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 11:10:06.884" endtime="20220926 11:10:06.885"/>
+</kw>
+<kw name="click">
+<arg>xpath=//div[@id='wrapper']/div[2]/div[3]/button/img</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:06.887" level="INFO">Clicking element 'xpath=//div[@id='wrapper']/div[2]/div[3]/button/img'.</msg>
+<status status="PASS" starttime="20220926 11:10:06.887" endtime="20220926 11:10:07.969"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:06.886" endtime="20220926 11:10:07.969"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ข้อมูลหลัก</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:10:07.970" endtime="20220926 11:10:08.517"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:08.521" level="INFO">Clicking element 'xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20220926 11:10:08.521" endtime="20220926 11:10:09.599"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:08.519" endtime="20220926 11:10:09.600"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ข้อมูลจุดขาย</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:10:09.601" endtime="20220926 11:10:10.159"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:11.216" level="INFO">${response} = ข้อมูลจุดขาย</msg>
+<status status="PASS" starttime="20220926 11:10:10.160" endtime="20220926 11:10:11.216"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>ข้อมูลจุดขาย</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 11:10:11.216" endtime="20220926 11:10:11.217"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="MASSPS"]/ul/li[5]/a</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:11.218" level="INFO">Clicking element 'xpath=//*[@id="MASSPS"]/ul/li[5]/a'.</msg>
+<status status="PASS" starttime="20220926 11:10:11.218" endtime="20220926 11:10:12.444"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:11.217" endtime="20220926 11:10:12.444"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ค้นหา</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:10:12.445" endtime="20220926 11:10:12.985"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="obtChnAdd"]</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:12.990" level="INFO">Clicking element 'xpath=//*[@id="obtChnAdd"]'.</msg>
+<status status="PASS" starttime="20220926 11:10:12.989" endtime="20220926 11:10:14.164"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:12.988" endtime="20220926 11:10:14.164"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>*ชื่อช่องทางการขาย</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:10:14.165" endtime="20220926 11:10:14.709"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="ofmAddChanel"]/div/div/div/div[3]/div/label</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:15.777" level="INFO">${response} = *ชื่อช่องทางการขาย</msg>
+<status status="PASS" starttime="20220926 11:10:14.710" endtime="20220926 11:10:15.777"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>*ชื่อช่องทางการขาย</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 11:10:15.778" endtime="20220926 11:10:15.780"/>
+</kw>
+<kw name="click">
+<arg>id=oetChnName</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:15.783" level="INFO">Clicking element 'id=oetChnName'.</msg>
+<status status="PASS" starttime="20220926 11:10:15.782" endtime="20220926 11:10:16.900"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:15.781" endtime="20220926 11:10:16.900"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetChnName</arg>
+<arg>SKC CS_SUC01</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:16.901" level="INFO">Typing text 'SKC CS_SUC01' into text field 'id=oetChnName'.</msg>
+<status status="PASS" starttime="20220926 11:10:16.901" endtime="20220926 11:10:18.536"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0,200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220926 11:10:18.537" level="INFO">Executing JavaScript:
+window.scrollTo(0,200)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220926 11:10:18.536" endtime="20220926 11:10:19.051"/>
+</kw>
+<kw name="click">
+<arg>id=oimChnBrowseApp</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:19.053" level="INFO">Clicking element 'id=oimChnBrowseApp'.</msg>
+<status status="PASS" starttime="20220926 11:10:19.053" endtime="20220926 11:10:20.157"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:19.052" endtime="20220926 11:10:20.157"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>แสดงข้อมูล : ระบบ</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:10:20.159" endtime="20220926 11:10:20.701"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="odvModalContent"]/div[1]/div/div[1]/label</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:21.786" level="INFO">${response} = แสดงข้อมูล : ระบบ</msg>
+<status status="PASS" starttime="20220926 11:10:20.703" endtime="20220926 11:10:21.786"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>แสดงข้อมูล : ระบบ</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 11:10:21.788" endtime="20220926 11:10:21.790"/>
+</kw>
+<kw name="click">
+<arg>//*[@id="otbBrowserList"]/tbody/tr[6]/td[2]</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:21.793" level="INFO">Clicking element '//*[@id="otbBrowserList"]/tbody/tr[6]/td[2]'.</msg>
+<status status="PASS" starttime="20220926 11:10:21.792" endtime="20220926 11:10:22.891"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:21.791" endtime="20220926 11:10:22.892"/>
+</kw>
+<kw name="click">
+<arg>//*[@id="odvModalContent"]/div[1]/div/div[2]/button[1]</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:22.896" level="INFO">Clicking element '//*[@id="odvModalContent"]/div[1]/div/div[2]/button[1]'.</msg>
+<status status="PASS" starttime="20220926 11:10:22.895" endtime="20220926 11:10:24.006"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:22.894" endtime="20220926 11:10:24.007"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220926 11:10:24.011" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220926 11:10:24.009" endtime="20220926 11:10:24.534"/>
+</kw>
+<kw name="click">
+<arg>//*[@id="odvBtnAddEdit"]/div/button[1]</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:24.537" level="INFO">Clicking element '//*[@id="odvBtnAddEdit"]/div/button[1]'.</msg>
+<status status="PASS" starttime="20220926 11:10:24.536" endtime="20220926 11:10:25.661"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:24.535" endtime="20220926 11:10:25.662"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ช่องทางการขาย</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:10:25.664" endtime="20220926 11:10:26.220"/>
+</kw>
+<kw name="click">
+<arg>id=oliChnTitle</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:26.225" level="INFO">Clicking element 'id=oliChnTitle'.</msg>
+<status status="PASS" starttime="20220926 11:10:26.224" endtime="20220926 11:10:27.836"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:26.222" endtime="20220926 11:10:27.836"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//*[@id="oliChnTitle"]</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220926 11:10:27.838" endtime="20220926 11:10:28.891"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220926 11:10:28.893" endtime="20220926 11:10:31.481"/>
+</kw>
+<status status="PASS" starttime="20220926 11:09:49.212" endtime="20220926 11:10:31.484"/>
+</test>
+<test id="s1-t5" name="AD_Cre_Receipt_Fail" line="142">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220926 11:10:31.492" level="INFO">Opening browser 'chrome' to base url 'http://sit.ada-soft.com:8889/login'.</msg>
+<status status="PASS" starttime="20220926 11:10:31.491" endtime="20220926 11:10:33.704"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220926 11:10:33.705" endtime="20220926 11:10:33.706"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:31.490" endtime="20220926 11:10:33.706"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220926 11:10:33.708" endtime="20220926 11:10:34.371"/>
+</kw>
+<kw name="type">
+<arg>id=oetUsername</arg>
+<arg>009</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:34.376" level="INFO">Typing text '009' into text field 'id=oetUsername'.</msg>
+<status status="PASS" starttime="20220926 11:10:34.374" endtime="20220926 11:10:36.009"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:34.373" endtime="20220926 11:10:36.009"/>
+</kw>
+<kw name="type">
+<arg>id=oetPassword</arg>
+<arg>123456</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:36.011" level="INFO">Typing text '123456' into text field 'id=oetPassword'.</msg>
+<status status="PASS" starttime="20220926 11:10:36.010" endtime="20220926 11:10:37.641"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:36.010" endtime="20220926 11:10:37.641"/>
+</kw>
+<kw name="click">
+<arg>xpath=//button[@id='obtLOGConfirmLogin']/span</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:37.643" level="INFO">Clicking element 'xpath=//button[@id='obtLOGConfirmLogin']/span'.</msg>
+<status status="PASS" starttime="20220926 11:10:37.642" endtime="20220926 11:10:38.702"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:37.642" endtime="20220926 11:10:38.702"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//*[@id="spnCompanyName"]</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220926 11:10:38.703" endtime="20220926 11:10:48.896"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>AdaSoft</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:10:48.897" endtime="20220926 11:10:49.425"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="spnCompanyName"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:50.466" level="INFO">${response} = AdaSoft</msg>
+<status status="PASS" starttime="20220926 11:10:49.426" endtime="20220926 11:10:50.466"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>AdaSoft</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 11:10:50.468" endtime="20220926 11:10:50.469"/>
+</kw>
+<kw name="click">
+<arg>xpath=//div[@id='wrapper']/div[2]/div[3]/button/img</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:50.473" level="INFO">Clicking element 'xpath=//div[@id='wrapper']/div[2]/div[3]/button/img'.</msg>
+<status status="PASS" starttime="20220926 11:10:50.472" endtime="20220926 11:10:51.553"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:50.471" endtime="20220926 11:10:51.554"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ข้อมูลหลัก</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:10:51.555" endtime="20220926 11:10:52.114"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:52.115" level="INFO">Clicking element 'xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20220926 11:10:52.114" endtime="20220926 11:10:53.189"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:52.114" endtime="20220926 11:10:53.189"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ข้อมูลจุดขาย</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:10:53.190" endtime="20220926 11:10:53.717"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:54.778" level="INFO">${response} = ข้อมูลจุดขาย</msg>
+<status status="PASS" starttime="20220926 11:10:53.718" endtime="20220926 11:10:54.778"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>ข้อมูลจุดขาย</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 11:10:54.780" endtime="20220926 11:10:54.781"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="MASSPS"]/ul/li[2]/a</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:54.784" level="INFO">Clicking element 'xpath=//*[@id="MASSPS"]/ul/li[2]/a'.</msg>
+<status status="PASS" starttime="20220926 11:10:54.783" endtime="20220926 11:10:56.159"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:54.782" endtime="20220926 11:10:56.160"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ค้นหา</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:10:56.162" endtime="20220926 11:10:56.829"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="obtSmgAdd"]</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:10:56.832" level="INFO">Clicking element 'xpath=//*[@id="obtSmgAdd"]'.</msg>
+<status status="PASS" starttime="20220926 11:10:56.832" endtime="20220926 11:10:57.916"/>
+</kw>
+<status status="PASS" starttime="20220926 11:10:56.831" endtime="20220926 11:10:57.917"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>*ชื่อหัวท้ายใบเสร็จ</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:10:57.917" endtime="20220926 11:10:58.461"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="ofmAddSlipMessage"]/div/div[1]/div/div[5]/div/label</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:11:49.671" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20220926 11:11:49.671" level="FAIL">Element with locator 'xpath=//*[@id="ofmAddSlipMessage"]/div/div[1]/div/div[5]/div/label' not found.</msg>
+<status status="FAIL" starttime="20220926 11:10:58.462" endtime="20220926 11:11:49.672"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>*ชื่อหัวท้ายใบเสร็จ</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.674" endtime="20220926 11:11:49.674"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="odvBtnAddEdit"]/div/button[1]</arg>
+<status status="NOT RUN" starttime="20220926 11:11:49.676" endtime="20220926 11:11:49.676"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>กรุณากรอกขนาดตัวอักษร</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.677" endtime="20220926 11:11:49.678"/>
+</kw>
+<kw name="click">
+<arg>id=oetSmgFontsSize</arg>
+<status status="NOT RUN" starttime="20220926 11:11:49.679" endtime="20220926 11:11:49.679"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetSmgFontsSize</arg>
+<arg>16</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.680" endtime="20220926 11:11:49.680"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>กรุณากรอกชื่อหัวท้ายใบเสร็จ</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.683" endtime="20220926 11:11:49.684"/>
+</kw>
+<kw name="click">
+<arg>id=oetSmgTitle</arg>
+<status status="NOT RUN" starttime="20220926 11:11:49.685" endtime="20220926 11:11:49.685"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetSmgTitle</arg>
+<arg>SKC RC_FAIL01</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.686" endtime="20220926 11:11:49.687"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0,200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.688" endtime="20220926 11:11:49.688"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>กรุณากรอกชื่อหัวท้ายใบเสร็จ</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.689" endtime="20220926 11:11:49.689"/>
+</kw>
+<kw name="click">
+<arg>id=oetSmgSlipHead1</arg>
+<status status="NOT RUN" starttime="20220926 11:11:49.690" endtime="20220926 11:11:49.690"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetSmgSlipHead1</arg>
+<arg>Receipt/Tax02</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.691" endtime="20220926 11:11:49.691"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>กรุณากรอกชื่อหัวท้ายใบเสร็จ</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.692" endtime="20220926 11:11:49.692"/>
+</kw>
+<kw name="click">
+<arg>id=oetSmgSlipEnd1</arg>
+<status status="NOT RUN" starttime="20220926 11:11:49.693" endtime="20220926 11:11:49.694"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetSmgSlipEnd1</arg>
+<arg>WELCOME02</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.694" endtime="20220926 11:11:49.694"/>
+</kw>
+<kw name="click">
+<arg>id=xWSmgAddHeadRow</arg>
+<status status="NOT RUN" starttime="20220926 11:11:49.695" endtime="20220926 11:11:49.695"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.697" endtime="20220926 11:11:49.697"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="odvBtnAddEdit"]/div/button[1]</arg>
+<status status="NOT RUN" starttime="20220926 11:11:49.698" endtime="20220926 11:11:49.698"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>กรุณากรอกชื่อหัวท้ายใบเสร็จ</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.698" endtime="20220926 11:11:49.699"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0,200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.699" endtime="20220926 11:11:49.700"/>
+</kw>
+<kw name="click">
+<arg>id=oetSmgSlipHead2</arg>
+<status status="NOT RUN" starttime="20220926 11:11:49.700" endtime="20220926 11:11:49.700"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetSmgSlipHead2</arg>
+<arg>SiamKubota02</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.700" endtime="20220926 11:11:49.700"/>
+</kw>
+<kw name="click">
+<arg>id=xWSmgAddEndRow</arg>
+<status status="NOT RUN" starttime="20220926 11:11:49.701" endtime="20220926 11:11:49.701"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.701" endtime="20220926 11:11:49.701"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="odvBtnAddEdit"]/div/button[1]</arg>
+<status status="NOT RUN" starttime="20220926 11:11:49.702" endtime="20220926 11:11:49.702"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>กรุณากรอกชื่อหัวท้ายใบเสร็จ</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.702" endtime="20220926 11:11:49.702"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0,300)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.703" endtime="20220926 11:11:49.703"/>
+</kw>
+<kw name="click">
+<arg>id=oetSmgSlipEnd2</arg>
+<status status="NOT RUN" starttime="20220926 11:11:49.703" endtime="20220926 11:11:49.703"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetSmgSlipEnd2</arg>
+<arg>THANK YOU02</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.704" endtime="20220926 11:11:49.704"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.704" endtime="20220926 11:11:49.704"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="odvBtnAddEdit"]/div/button[1]</arg>
+<status status="NOT RUN" starttime="20220926 11:11:49.705" endtime="20220926 11:11:49.705"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>หัวท้ายใบเสร็จ</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.705" endtime="20220926 11:11:49.705"/>
+</kw>
+<kw name="click">
+<arg>id=oliSmgTitle</arg>
+<status status="NOT RUN" starttime="20220926 11:11:49.705" endtime="20220926 11:11:49.705"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//*[@id="oliSmgTitle"]</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220926 11:11:49.705" endtime="20220926 11:11:49.705"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220926 11:11:49.706" endtime="20220926 11:11:52.280"/>
+</kw>
+<status status="FAIL" starttime="20220926 11:10:31.488" endtime="20220926 11:11:52.282">Element with locator 'xpath=//*[@id="ofmAddSlipMessage"]/div/div[1]/div/div[5]/div/label' not found.</status>
+</test>
+<test id="s1-t6" name="AD_Cre_Sale_Ch_Fail" line="211">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220926 11:11:52.291" level="INFO">Opening browser 'chrome' to base url 'http://sit.ada-soft.com:8889/login'.</msg>
+<status status="PASS" starttime="20220926 11:11:52.290" endtime="20220926 11:11:54.872"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220926 11:11:54.872" endtime="20220926 11:11:54.872"/>
+</kw>
+<status status="PASS" starttime="20220926 11:11:52.289" endtime="20220926 11:11:54.873"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220926 11:11:54.873" endtime="20220926 11:11:55.509"/>
+</kw>
+<kw name="type">
+<arg>id=oetUsername</arg>
+<arg>009</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:11:55.511" level="INFO">Typing text '009' into text field 'id=oetUsername'.</msg>
+<status status="PASS" starttime="20220926 11:11:55.510" endtime="20220926 11:11:57.129"/>
+</kw>
+<status status="PASS" starttime="20220926 11:11:55.509" endtime="20220926 11:11:57.129"/>
+</kw>
+<kw name="type">
+<arg>id=oetPassword</arg>
+<arg>123456</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:11:57.131" level="INFO">Typing text '123456' into text field 'id=oetPassword'.</msg>
+<status status="PASS" starttime="20220926 11:11:57.130" endtime="20220926 11:11:58.740"/>
+</kw>
+<status status="PASS" starttime="20220926 11:11:57.130" endtime="20220926 11:11:58.740"/>
+</kw>
+<kw name="click">
+<arg>xpath=//button[@id='obtLOGConfirmLogin']/span</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:11:58.742" level="INFO">Clicking element 'xpath=//button[@id='obtLOGConfirmLogin']/span'.</msg>
+<status status="PASS" starttime="20220926 11:11:58.742" endtime="20220926 11:11:59.804"/>
+</kw>
+<status status="PASS" starttime="20220926 11:11:58.741" endtime="20220926 11:11:59.804"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//*[@id="spnCompanyName"]</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220926 11:11:59.805" endtime="20220926 11:12:08.344"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>AdaSoft</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:12:08.344" endtime="20220926 11:12:08.886"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="spnCompanyName"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:09.925" level="INFO">${response} = AdaSoft</msg>
+<status status="PASS" starttime="20220926 11:12:08.887" endtime="20220926 11:12:09.925"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>AdaSoft</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 11:12:09.925" endtime="20220926 11:12:09.926"/>
+</kw>
+<kw name="click">
+<arg>xpath=//div[@id='wrapper']/div[2]/div[3]/button/img</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:09.927" level="INFO">Clicking element 'xpath=//div[@id='wrapper']/div[2]/div[3]/button/img'.</msg>
+<status status="PASS" starttime="20220926 11:12:09.927" endtime="20220926 11:12:10.987"/>
+</kw>
+<status status="PASS" starttime="20220926 11:12:09.926" endtime="20220926 11:12:10.987"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ข้อมูลหลัก</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:12:10.988" endtime="20220926 11:12:11.513"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:11.516" level="INFO">Clicking element 'xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a'.</msg>
+<status status="PASS" starttime="20220926 11:12:11.516" endtime="20220926 11:12:12.601"/>
+</kw>
+<status status="PASS" starttime="20220926 11:12:11.515" endtime="20220926 11:12:12.601"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ข้อมูลจุดขาย</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:12:12.601" endtime="20220926 11:12:13.144"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:14.183" level="INFO">${response} = ข้อมูลจุดขาย</msg>
+<status status="PASS" starttime="20220926 11:12:13.145" endtime="20220926 11:12:14.183"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>ข้อมูลจุดขาย</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 11:12:14.185" endtime="20220926 11:12:14.186"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="MASSPS"]/ul/li[5]/a</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:14.189" level="INFO">Clicking element 'xpath=//*[@id="MASSPS"]/ul/li[5]/a'.</msg>
+<status status="PASS" starttime="20220926 11:12:14.189" endtime="20220926 11:12:15.411"/>
+</kw>
+<status status="PASS" starttime="20220926 11:12:14.187" endtime="20220926 11:12:15.411"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ค้นหา</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:12:15.412" endtime="20220926 11:12:15.956"/>
+</kw>
+<kw name="click">
+<arg>//*[@id="obtChnAdd"]</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:15.958" level="INFO">Clicking element '//*[@id="obtChnAdd"]'.</msg>
+<status status="PASS" starttime="20220926 11:12:15.958" endtime="20220926 11:12:17.060"/>
+</kw>
+<status status="PASS" starttime="20220926 11:12:15.957" endtime="20220926 11:12:17.060"/>
+</kw>
+<kw name="click">
+<arg>//*[@id="odvBtnAddEdit"]/div/button[1]</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:17.061" level="INFO">Clicking element '//*[@id="odvBtnAddEdit"]/div/button[1]'.</msg>
+<status status="PASS" starttime="20220926 11:12:17.061" endtime="20220926 11:12:18.176"/>
+</kw>
+<status status="PASS" starttime="20220926 11:12:17.061" endtime="20220926 11:12:18.177"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>กรุณากรอกชื่อหัวท้ายใบเสร็จ</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:12:18.178" endtime="20220926 11:12:18.738"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>*ชื่อช่องทางการขาย</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:12:18.738" endtime="20220926 11:12:19.270"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="ofmAddChanel"]/div/div/div/div[3]/div/label</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:20.312" level="INFO">${response} = *ชื่อช่องทางการขาย</msg>
+<status status="PASS" starttime="20220926 11:12:19.270" endtime="20220926 11:12:20.312"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>*ชื่อช่องทางการขาย</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 11:12:20.314" endtime="20220926 11:12:20.315"/>
+</kw>
+<kw name="click">
+<arg>id=oetChnName</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:20.317" level="INFO">Clicking element 'id=oetChnName'.</msg>
+<status status="PASS" starttime="20220926 11:12:20.316" endtime="20220926 11:12:21.414"/>
+</kw>
+<status status="PASS" starttime="20220926 11:12:20.316" endtime="20220926 11:12:21.414"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetChnName</arg>
+<arg>SKC CS_FAIL01</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:21.417" level="INFO">Typing text 'SKC CS_FAIL01' into text field 'id=oetChnName'.</msg>
+<status status="PASS" starttime="20220926 11:12:21.416" endtime="20220926 11:12:23.092"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0,200)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220926 11:12:23.094" level="INFO">Executing JavaScript:
+window.scrollTo(0,200)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220926 11:12:23.093" endtime="20220926 11:12:23.602"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>กรุณากรอกระบบ</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:12:23.604" endtime="20220926 11:12:24.163"/>
+</kw>
+<kw name="click">
+<arg>id=oimChnBrowseApp</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:24.168" level="INFO">Clicking element 'id=oimChnBrowseApp'.</msg>
+<status status="PASS" starttime="20220926 11:12:24.167" endtime="20220926 11:12:25.263"/>
+</kw>
+<status status="PASS" starttime="20220926 11:12:24.165" endtime="20220926 11:12:25.263"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>แสดงข้อมูล : ระบบ</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:12:25.264" endtime="20220926 11:12:25.804"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="odvModalContent"]/div[1]/div/div[1]/label</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:26.879" level="INFO">${response} = แสดงข้อมูล : ระบบ</msg>
+<status status="PASS" starttime="20220926 11:12:25.806" endtime="20220926 11:12:26.879"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>แสดงข้อมูล : ระบบ</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20220926 11:12:26.880" endtime="20220926 11:12:26.880"/>
+</kw>
+<kw name="click">
+<arg>//*[@id="otbBrowserList"]/tbody/tr[6]/td[2]</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:26.882" level="INFO">Clicking element '//*[@id="otbBrowserList"]/tbody/tr[6]/td[2]'.</msg>
+<status status="PASS" starttime="20220926 11:12:26.881" endtime="20220926 11:12:27.985"/>
+</kw>
+<status status="PASS" starttime="20220926 11:12:26.881" endtime="20220926 11:12:27.986"/>
+</kw>
+<kw name="click">
+<arg>//*[@id="odvModalContent"]/div[1]/div/div[2]/button[1]</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:27.990" level="INFO">Clicking element '//*[@id="odvModalContent"]/div[1]/div/div[2]/button[1]'.</msg>
+<status status="PASS" starttime="20220926 11:12:27.989" endtime="20220926 11:12:29.071"/>
+</kw>
+<status status="PASS" starttime="20220926 11:12:27.987" endtime="20220926 11:12:29.071"/>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<arg>window.scrollTo(0,0)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20220926 11:12:29.075" level="INFO">Executing JavaScript:
+window.scrollTo(0,0)
+Without any arguments.</msg>
+<status status="PASS" starttime="20220926 11:12:29.074" endtime="20220926 11:12:29.601"/>
+</kw>
+<kw name="click">
+<arg>//*[@id="odvBtnAddEdit"]/div/button[1]</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:29.606" level="INFO">Clicking element '//*[@id="odvBtnAddEdit"]/div/button[1]'.</msg>
+<status status="PASS" starttime="20220926 11:12:29.605" endtime="20220926 11:12:30.691"/>
+</kw>
+<status status="PASS" starttime="20220926 11:12:29.603" endtime="20220926 11:12:30.691"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ช่องทางการขาย</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20220926 11:12:30.692" endtime="20220926 11:12:31.234"/>
+</kw>
+<kw name="click">
+<arg>id=oliChnTitle</arg>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:31.235" level="INFO">Clicking element 'id=oliChnTitle'.</msg>
+<status status="PASS" starttime="20220926 11:12:31.235" endtime="20220926 11:12:32.325"/>
+</kw>
+<status status="PASS" starttime="20220926 11:12:31.235" endtime="20220926 11:12:32.325"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//*[@id="oliChnTitle"]</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220926 11:12:32.326" endtime="20220926 11:12:33.371"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220926 11:12:33.373" endtime="20220926 11:12:35.991"/>
+</kw>
+<status status="PASS" starttime="20220926 11:11:52.287" endtime="20220926 11:12:35.992"/>
+</test>
+<test id="s1-t7" name="AD_Create_SC" line="263">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220926 11:12:35.996" level="INFO">Opening browser 'chrome' to base url 'http://sit.ada-soft.com:8889/login'.</msg>
+<status status="PASS" starttime="20220926 11:12:35.995" endtime="20220926 11:12:38.312"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220926 11:12:38.313" endtime="20220926 11:12:38.313"/>
+</kw>
+<status status="PASS" starttime="20220926 11:12:35.995" endtime="20220926 11:12:38.313"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220926 11:12:38.315" endtime="20220926 11:12:57.473"/>
+</kw>
+<kw name="type">
+<arg>id=oetUsername</arg>
+<arg>${USERNAME}</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:12:57.480" level="INFO">Typing text '009' into text field 'id=oetUsername'.</msg>
+<msg timestamp="20220926 11:13:18.417" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=105.0.5195.127)
+</msg>
+<msg timestamp="20220926 11:13:18.419" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=105.0.5195.127)
+</msg>
+<status status="FAIL" starttime="20220926 11:12:57.477" endtime="20220926 11:13:18.477"/>
+</kw>
+<status status="FAIL" starttime="20220926 11:12:57.475" endtime="20220926 11:13:18.477"/>
+</kw>
+<kw name="type">
+<arg>id=oetPassword</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" starttime="20220926 11:13:18.478" endtime="20220926 11:13:18.478"/>
+</kw>
+<kw name="click">
+<arg>xpath=//button[@id='obtLOGConfirmLogin']/span</arg>
+<status status="NOT RUN" starttime="20220926 11:13:18.479" endtime="20220926 11:13:18.479"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//*[@id="spnCompanyName"]</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.480" endtime="20220926 11:13:18.480"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>AdaSoft</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.481" endtime="20220926 11:13:18.481"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="spnCompanyName"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.482" endtime="20220926 11:13:18.482"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>AdaSoft</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.483" endtime="20220926 11:13:18.483"/>
+</kw>
+<kw name="click">
+<arg>xpath=//div[@id='wrapper']/div[2]/div[3]/button/img</arg>
+<status status="NOT RUN" starttime="20220926 11:13:18.483" endtime="20220926 11:13:18.483"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ข้อมูลหลัก</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.484" endtime="20220926 11:13:18.484"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a/span</arg>
+<status status="NOT RUN" starttime="20220926 11:13:18.486" endtime="20220926 11:13:18.486"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>สื่อ,ข้อความ หน้าจอลูกค้า</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.487" endtime="20220926 11:13:18.487"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="MASSPS"]/ul/li[3]/a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.488" endtime="20220926 11:13:18.488"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>สื่อ,ข้อความ หน้าจอลูกค้า</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.488" endtime="20220926 11:13:18.488"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="MASSPS"]/ul/li[3]/a</arg>
+<status status="NOT RUN" starttime="20220926 11:13:18.489" endtime="20220926 11:13:18.489"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ค้นหา</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.490" endtime="20220926 11:13:18.490"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.490" endtime="20220926 11:13:18.490"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="obtAdvAdd"]</arg>
+<status status="NOT RUN" starttime="20220926 11:13:18.491" endtime="20220926 11:13:18.491"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.491" endtime="20220926 11:13:18.491"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//*[@id="obtBarSubmitAdv"]/div/button[1]</arg>
+<arg>20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.492" endtime="20220926 11:13:18.492"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>รหัสโฆษณา</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.492" endtime="20220926 11:13:18.492"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>บันทึก</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.493" endtime="20220926 11:13:18.493"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="ofmAddAdMessage"]/div/div/div[1]/label</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.493" endtime="20220926 11:13:18.493"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>* รหัสโฆษณา</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.494" endtime="20220926 11:13:18.494"/>
+</kw>
+<kw name="click">
+<arg>id=oetAdvName</arg>
+<status status="NOT RUN" starttime="20220926 11:13:18.494" endtime="20220926 11:13:18.494"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetAdvName</arg>
+<arg>AD TEST</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.495" endtime="20220926 11:13:18.495"/>
+</kw>
+<kw name="click">
+<arg>id=oetAdvMsg</arg>
+<status status="NOT RUN" starttime="20220926 11:13:18.496" endtime="20220926 11:13:18.496"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetAdvMsg</arg>
+<arg>สื่อโฆษณาทั่วไป</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.497" endtime="20220926 11:13:18.498"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.498" endtime="20220926 11:13:18.498"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.499" endtime="20220926 11:13:18.499"/>
+</kw>
+<kw name="click">
+<arg>xpath=//button[@type='submit']</arg>
+<status status="NOT RUN" starttime="20220926 11:13:18.500" endtime="20220926 11:13:18.500"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//*[@id="oetAdvName"]</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.501" endtime="20220926 11:13:18.501"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ชื่อโฆษณา</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.502" endtime="20220926 11:13:18.502"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.503" endtime="20220926 11:13:18.503"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="odvBtnAddEdit"]/button</arg>
+<status status="NOT RUN" starttime="20220926 11:13:18.504" endtime="20220926 11:13:18.504"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>xpath=//*[@id="odvContentAdMessageData"]/div[1]/div/div/table/thead/tr/th[2]</arg>
+<arg>50</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.505" endtime="20220926 11:13:18.505"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>AD TEST</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:18.505" endtime="20220926 11:13:18.505"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220926 11:13:18.506" endtime="20220926 11:13:21.033"/>
+</kw>
+<status status="FAIL" starttime="20220926 11:12:35.994" endtime="20220926 11:13:21.034">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=105.0.5195.127)
+</status>
+</test>
+<test id="s1-t8" name="AD_Create_FC_NameAD" line="321">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220926 11:13:21.038" level="INFO">Opening browser 'chrome' to base url 'http://sit.ada-soft.com:8889/login'.</msg>
+<status status="PASS" starttime="20220926 11:13:21.037" endtime="20220926 11:13:23.368"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220926 11:13:23.369" endtime="20220926 11:13:23.370"/>
+</kw>
+<status status="PASS" starttime="20220926 11:13:21.037" endtime="20220926 11:13:23.370"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220926 11:13:23.372" endtime="20220926 11:13:24.035"/>
+</kw>
+<kw name="type">
+<arg>id=oetUsername</arg>
+<arg>${USERNAME}</arg>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element}</arg>
+<arg>${value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220926 11:13:24.040" level="INFO">Typing text '009' into text field 'id=oetUsername'.</msg>
+<msg timestamp="20220926 11:13:25.139" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+</msg>
+<msg timestamp="20220926 11:13:25.144" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+</msg>
+<status status="FAIL" starttime="20220926 11:13:24.039" endtime="20220926 11:13:25.192"/>
+</kw>
+<status status="FAIL" starttime="20220926 11:13:24.037" endtime="20220926 11:13:25.192"/>
+</kw>
+<kw name="type">
+<arg>id=oetPassword</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" starttime="20220926 11:13:25.195" endtime="20220926 11:13:25.195"/>
+</kw>
+<kw name="click">
+<arg>xpath=//button[@id='obtLOGConfirmLogin']/span</arg>
+<status status="NOT RUN" starttime="20220926 11:13:25.196" endtime="20220926 11:13:25.196"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>AdaSoft</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.197" endtime="20220926 11:13:25.197"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="spnCompanyName"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.198" endtime="20220926 11:13:25.198"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>AdaSoft</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.199" endtime="20220926 11:13:25.200"/>
+</kw>
+<kw name="click">
+<arg>xpath=//div[@id='wrapper']/div[2]/div[3]/button/img</arg>
+<status status="NOT RUN" starttime="20220926 11:13:25.200" endtime="20220926 11:13:25.201"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ข้อมูลหลัก</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.204" endtime="20220926 11:13:25.204"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a/span</arg>
+<status status="NOT RUN" starttime="20220926 11:13:25.205" endtime="20220926 11:13:25.205"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>สื่อ,ข้อความ หน้าจอลูกค้า</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.206" endtime="20220926 11:13:25.206"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="MASSPS"]/ul/li[3]/a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.207" endtime="20220926 11:13:25.207"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>สื่อ,ข้อความ หน้าจอลูกค้า</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.207" endtime="20220926 11:13:25.208"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="MASSPS"]/ul/li[3]/a</arg>
+<status status="NOT RUN" starttime="20220926 11:13:25.208" endtime="20220926 11:13:25.208"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ค้นหา</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.209" endtime="20220926 11:13:25.209"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.210" endtime="20220926 11:13:25.210"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="obtAdvAdd"]</arg>
+<status status="NOT RUN" starttime="20220926 11:13:25.210" endtime="20220926 11:13:25.210"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>รหัสโฆษณา</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.211" endtime="20220926 11:13:25.211"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="ofmAddAdMessage"]/div/div/div[1]/label</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.212" endtime="20220926 11:13:25.212"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>* รหัสโฆษณา</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.213" endtime="20220926 11:13:25.214"/>
+</kw>
+<kw name="click">
+<arg>id=oetAdvName</arg>
+<status status="NOT RUN" starttime="20220926 11:13:25.214" endtime="20220926 11:13:25.214"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetAdvMsg</arg>
+<arg>สื่อโฆษณาทั่วไป</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.215" endtime="20220926 11:13:25.215"/>
+</kw>
+<kw name="click">
+<arg>xpath=//button[@type='submit']</arg>
+<status status="NOT RUN" starttime="20220926 11:13:25.216" endtime="20220926 11:13:25.216"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ชื่อโฆษณา</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.217" endtime="20220926 11:13:25.217"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="oetAdvName-error"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.218" endtime="20220926 11:13:25.218"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>กรุณากรอกชื่อ</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:25.218" endtime="20220926 11:13:25.218"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220926 11:13:25.219" endtime="20220926 11:13:27.752"/>
+</kw>
+<status status="FAIL" starttime="20220926 11:13:21.036" endtime="20220926 11:13:27.754">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+</status>
+</test>
+<test id="s1-t9" name="AD_Create_FC_TextAD" line="365">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220926 11:13:27.764" level="INFO">Opening browser 'chrome' to base url 'http://sit.ada-soft.com:8889/login'.</msg>
+<status status="PASS" starttime="20220926 11:13:27.764" endtime="20220926 11:13:30.126"/>
+</kw>
+<kw name="Set Selenium Speed" library="Selenium2Library">
+<arg>${SELSPEED}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220926 11:13:30.127" endtime="20220926 11:13:30.128"/>
+</kw>
+<status status="PASS" starttime="20220926 11:13:27.764" endtime="20220926 11:13:30.129"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20220926 11:13:30.140" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+</msg>
+<msg timestamp="20220926 11:13:30.145" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=105.0.5195.127)
+</msg>
+<status status="FAIL" starttime="20220926 11:13:30.131" endtime="20220926 11:13:30.171"/>
+</kw>
+<kw name="type">
+<arg>id=oetUsername</arg>
+<arg>${USERNAME}</arg>
+<status status="NOT RUN" starttime="20220926 11:13:30.172" endtime="20220926 11:13:30.172"/>
+</kw>
+<kw name="type">
+<arg>id=oetPassword</arg>
+<arg>${PASSWORD}</arg>
+<status status="NOT RUN" starttime="20220926 11:13:30.172" endtime="20220926 11:13:30.172"/>
+</kw>
+<kw name="click">
+<arg>xpath=//button[@id='obtLOGConfirmLogin']/span</arg>
+<status status="NOT RUN" starttime="20220926 11:13:30.173" endtime="20220926 11:13:30.173"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>AdaSoft</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:30.173" endtime="20220926 11:13:30.173"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="spnCompanyName"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:30.174" endtime="20220926 11:13:30.174"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>AdaSoft</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:30.175" endtime="20220926 11:13:30.175"/>
+</kw>
+<kw name="click">
+<arg>xpath=//div[@id='wrapper']/div[2]/div[3]/button/img</arg>
+<status status="NOT RUN" starttime="20220926 11:13:30.175" endtime="20220926 11:13:30.176"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ข้อมูลหลัก</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:30.176" endtime="20220926 11:13:30.176"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="oNavMenuMAS"]/ul/li/ul/li[3]/a/span</arg>
+<status status="NOT RUN" starttime="20220926 11:13:30.177" endtime="20220926 11:13:30.177"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>สื่อ,ข้อความ หน้าจอลูกค้า</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:30.178" endtime="20220926 11:13:30.178"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="MASSPS"]/ul/li[3]/a</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:30.179" endtime="20220926 11:13:30.179"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>สื่อ,ข้อความ หน้าจอลูกค้า</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:30.179" endtime="20220926 11:13:30.179"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="MASSPS"]/ul/li[3]/a</arg>
+<status status="NOT RUN" starttime="20220926 11:13:30.180" endtime="20220926 11:13:30.180"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>ค้นหา</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:30.180" endtime="20220926 11:13:30.181"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:30.181" endtime="20220926 11:13:30.181"/>
+</kw>
+<kw name="click">
+<arg>xpath=//*[@id="obtAdvAdd"]</arg>
+<status status="NOT RUN" starttime="20220926 11:13:30.181" endtime="20220926 11:13:30.181"/>
+</kw>
+<kw name="Wait Until Page Contains" library="Selenium2Library">
+<arg>รหัสโฆษณา</arg>
+<arg>50</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:30.182" endtime="20220926 11:13:30.182"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${response}</var>
+<arg>xpath=//*[@id="ofmAddAdMessage"]/div/div/div[1]/label</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:30.183" endtime="20220926 11:13:30.183"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>* รหัสโฆษณา</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:30.183" endtime="20220926 11:13:30.183"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:30.183" endtime="20220926 11:13:30.183"/>
+</kw>
+<kw name="click">
+<arg>id=oetAdvName</arg>
+<status status="NOT RUN" starttime="20220926 11:13:30.184" endtime="20220926 11:13:30.184"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>id=oetAdvName</arg>
+<arg>AD TEST</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220926 11:13:30.187" endtime="20220926 11:13:30.187"/>
+</kw>
+<kw name="click">
+<arg>xpath=//button[@type='submit']</arg>
+<status status="NOT RUN" starttime="20220926 11:13:30.187" endtime="20220926 11:13:30.188"/>
