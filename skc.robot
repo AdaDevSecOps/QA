@@ -3,7 +3,7 @@ Documentation     SKC AUTOMATION TEST
 Library           Selenium2Library    implicit_wait=50
 
 *** Variables ***
-${URL}            https://dev.ada-soft.com/AdaSiamKubota/login
+${URL}            http://sit.ada-soft.com:8889/login
 ${BROWSER}        chrome
 ${SELSPEED}       0.5s
 ${USERNAME}       009
@@ -443,7 +443,7 @@ AD_Del
     click    xpath=//*[@id="odvModalDelAdMessage"]/div/div/div[3]/button[2]
     sleep    5s
     END
-    sleep    5s
+   
     [Teardown]    Close Browser
 
 Printer_SC

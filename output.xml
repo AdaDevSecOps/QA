@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.1a2 (Python 3.8.7 on win32)" generated="20220923 08:59:14.378" rpa="false" schemaversion="3">
+<suite id="s1" name="Skc-Ff" source="G:\Ada V.5.0\ADA SKC\GC\QA\skc-ff.robot">
+<test id="s1-t1" name="Login_SC" line="14">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 08:59:14.605" level="INFO">Opening browser 'firefox' to base url 'https://dev.ada-soft.com/AdaSiamKubota/login'.</msg>
+<msg timestamp="20220923 08:59:14.607" level="INFO">Firefox driver log is always forced to to: G:\Ada V.5.0\ADA SKC\GC\QA\geckodriver-13.log</msg>
+<msg timestamp="20220923 08:59:17.739" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220923 08:59:17.739" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<status status="FAIL" starttime="20220923 08:59:14.605" endtime="20220923 08:59:17.742"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:14.604" endtime="20220923 08:59:17.742"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220923 08:59:17.743" endtime="20220923 08:59:17.743"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:14.604" endtime="20220923 08:59:17.743">Setup failed:
+SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<test id="s1-t2" name="Login_FC" line="27">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 08:59:17.747" level="INFO">Opening browser 'firefox' to base url 'https://dev.ada-soft.com/AdaSiamKubota/login'.</msg>
+<msg timestamp="20220923 08:59:17.748" level="INFO">Firefox driver log is always forced to to: G:\Ada V.5.0\ADA SKC\GC\QA\geckodriver-14.log</msg>
+<msg timestamp="20220923 08:59:20.835" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220923 08:59:20.835" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<status status="FAIL" starttime="20220923 08:59:17.747" endtime="20220923 08:59:20.836"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:17.746" endtime="20220923 08:59:20.836"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220923 08:59:20.837" endtime="20220923 08:59:20.837"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:17.746" endtime="20220923 08:59:20.838">Setup failed:
+SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<test id="s1-t3" name="AD_Cre_Receipt_Suc" line="41">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 08:59:20.844" level="INFO">Opening browser 'firefox' to base url 'https://dev.ada-soft.com/AdaSiamKubota/login'.</msg>
+<msg timestamp="20220923 08:59:20.845" level="INFO">Firefox driver log is always forced to to: G:\Ada V.5.0\ADA SKC\GC\QA\geckodriver-15.log</msg>
+<msg timestamp="20220923 08:59:23.916" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220923 08:59:23.916" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<status status="FAIL" starttime="20220923 08:59:20.841" endtime="20220923 08:59:23.917"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:20.841" endtime="20220923 08:59:23.917"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220923 08:59:23.918" endtime="20220923 08:59:23.918"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:20.840" endtime="20220923 08:59:23.919">Setup failed:
+SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<test id="s1-t4" name="AD_Cre_Sale_Ch_Suc" line="94">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 08:59:23.923" level="INFO">Opening browser 'firefox' to base url 'https://dev.ada-soft.com/AdaSiamKubota/login'.</msg>
+<msg timestamp="20220923 08:59:23.925" level="INFO">Firefox driver log is always forced to to: G:\Ada V.5.0\ADA SKC\GC\QA\geckodriver-16.log</msg>
+<msg timestamp="20220923 08:59:27.017" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220923 08:59:27.018" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<status status="FAIL" starttime="20220923 08:59:23.922" endtime="20220923 08:59:27.018"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:23.922" endtime="20220923 08:59:27.018"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220923 08:59:27.019" endtime="20220923 08:59:27.019"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:23.921" endtime="20220923 08:59:27.020">Setup failed:
+SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<test id="s1-t5" name="AD_Cre_Receipt_Fail" line="142">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 08:59:27.025" level="INFO">Opening browser 'firefox' to base url 'https://dev.ada-soft.com/AdaSiamKubota/login'.</msg>
+<msg timestamp="20220923 08:59:27.027" level="INFO">Firefox driver log is always forced to to: G:\Ada V.5.0\ADA SKC\GC\QA\geckodriver-17.log</msg>
+<msg timestamp="20220923 08:59:30.122" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220923 08:59:30.123" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<status status="FAIL" starttime="20220923 08:59:27.024" endtime="20220923 08:59:30.123"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:27.023" endtime="20220923 08:59:30.123"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220923 08:59:30.124" endtime="20220923 08:59:30.124"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:27.022" endtime="20220923 08:59:30.125">Setup failed:
+SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<test id="s1-t6" name="AD_Cre_Sale_Ch_Fail" line="211">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 08:59:30.129" level="INFO">Opening browser 'firefox' to base url 'https://dev.ada-soft.com/AdaSiamKubota/login'.</msg>
+<msg timestamp="20220923 08:59:30.130" level="INFO">Firefox driver log is always forced to to: G:\Ada V.5.0\ADA SKC\GC\QA\geckodriver-18.log</msg>
+<msg timestamp="20220923 08:59:33.166" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220923 08:59:33.167" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<status status="FAIL" starttime="20220923 08:59:30.128" endtime="20220923 08:59:33.168"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:30.128" endtime="20220923 08:59:33.168"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220923 08:59:33.170" endtime="20220923 08:59:33.171"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:30.127" endtime="20220923 08:59:33.171">Setup failed:
+SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<test id="s1-t7" name="AD_Create_SC" line="263">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 08:59:33.178" level="INFO">Opening browser 'firefox' to base url 'https://dev.ada-soft.com/AdaSiamKubota/login'.</msg>
+<msg timestamp="20220923 08:59:33.179" level="INFO">Firefox driver log is always forced to to: G:\Ada V.5.0\ADA SKC\GC\QA\geckodriver-19.log</msg>
+<msg timestamp="20220923 08:59:36.251" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220923 08:59:36.251" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<status status="FAIL" starttime="20220923 08:59:33.177" endtime="20220923 08:59:36.251"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:33.177" endtime="20220923 08:59:36.251"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220923 08:59:36.252" endtime="20220923 08:59:36.253"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:33.176" endtime="20220923 08:59:36.253">Setup failed:
+SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<test id="s1-t8" name="AD_Create_FC_NameAD" line="321">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 08:59:36.257" level="INFO">Opening browser 'firefox' to base url 'https://dev.ada-soft.com/AdaSiamKubota/login'.</msg>
+<msg timestamp="20220923 08:59:36.259" level="INFO">Firefox driver log is always forced to to: G:\Ada V.5.0\ADA SKC\GC\QA\geckodriver-20.log</msg>
+<msg timestamp="20220923 08:59:39.352" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220923 08:59:39.352" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<status status="FAIL" starttime="20220923 08:59:36.257" endtime="20220923 08:59:39.353"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:36.256" endtime="20220923 08:59:39.353"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220923 08:59:39.355" endtime="20220923 08:59:39.355"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:36.255" endtime="20220923 08:59:39.356">Setup failed:
+SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<test id="s1-t9" name="AD_Create_FC_TextAD" line="365">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 08:59:39.362" level="INFO">Opening browser 'firefox' to base url 'https://dev.ada-soft.com/AdaSiamKubota/login'.</msg>
+<msg timestamp="20220923 08:59:39.364" level="INFO">Firefox driver log is always forced to to: G:\Ada V.5.0\ADA SKC\GC\QA\geckodriver-21.log</msg>
+<msg timestamp="20220923 08:59:42.454" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220923 08:59:42.454" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<status status="FAIL" starttime="20220923 08:59:39.361" endtime="20220923 08:59:42.455"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:39.361" endtime="20220923 08:59:42.455"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220923 08:59:42.456" endtime="20220923 08:59:42.457"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:39.360" endtime="20220923 08:59:42.457">Setup failed:
+SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<test id="s1-t10" name="AD_Del" line="410">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 08:59:42.461" level="INFO">Opening browser 'firefox' to base url 'https://dev.ada-soft.com/AdaSiamKubota/login'.</msg>
+<msg timestamp="20220923 08:59:42.463" level="INFO">Firefox driver log is always forced to to: G:\Ada V.5.0\ADA SKC\GC\QA\geckodriver-22.log</msg>
+<msg timestamp="20220923 08:59:45.540" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220923 08:59:45.541" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<status status="FAIL" starttime="20220923 08:59:42.461" endtime="20220923 08:59:45.541"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:42.461" endtime="20220923 08:59:45.542"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220923 08:59:45.543" endtime="20220923 08:59:45.544"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:42.460" endtime="20220923 08:59:45.544">Setup failed:
+SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<test id="s1-t11" name="Printer_SC" line="449">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 08:59:45.556" level="INFO">Opening browser 'firefox' to base url 'https://dev.ada-soft.com/AdaSiamKubota/login'.</msg>
+<msg timestamp="20220923 08:59:45.558" level="INFO">Firefox driver log is always forced to to: G:\Ada V.5.0\ADA SKC\GC\QA\geckodriver-23.log</msg>
+<msg timestamp="20220923 08:59:48.619" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220923 08:59:48.619" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<status status="FAIL" starttime="20220923 08:59:45.556" endtime="20220923 08:59:48.620"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:45.556" endtime="20220923 08:59:48.620"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220923 08:59:48.621" endtime="20220923 08:59:48.621"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:45.548" endtime="20220923 08:59:48.622">Setup failed:
+SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<test id="s1-t12" name="Printer_Edit_Del" line="507">
+<kw name="Run Keywords" library="BuiltIn" type="SETUP">
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>AND</arg>
+<arg>Set Selenium Speed</arg>
+<arg>${SELSPEED}</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220923 08:59:48.625" level="INFO">Opening browser 'firefox' to base url 'https://dev.ada-soft.com/AdaSiamKubota/login'.</msg>
+<msg timestamp="20220923 08:59:48.627" level="INFO">Firefox driver log is always forced to to: G:\Ada V.5.0\ADA SKC\GC\QA\geckodriver-24.log</msg>
+<msg timestamp="20220923 08:59:51.718" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20220923 08:59:51.718" level="FAIL">SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</msg>
+<status status="FAIL" starttime="20220923 08:59:48.625" endtime="20220923 08:59:51.720"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:48.624" endtime="20220923 08:59:51.720"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220923 08:59:51.721" endtime="20220923 08:59:51.722"/>
+</kw>
+<status status="FAIL" starttime="20220923 08:59:48.624" endtime="20220923 08:59:51.722">Setup failed:
+SessionNotCreatedException: Message: Expected browser binary location, but unable to find binary in default location, no 'moz:firefoxOptions.binary' capability provided, and no binary flag set on the command line
+</status>
+</test>
+<doc>SKC AUTOMATION TEST</doc>
+<status status="FAIL" starttime="20220923 08:59:14.380" endtime="20220923 08:59:51.727"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="12" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="12" skip="0" id="s1" name="Skc-Ff">Skc-Ff</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
